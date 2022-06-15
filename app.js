@@ -1,13 +1,16 @@
 const path = require('path');
 
 const express = require('express');
+const dotEnv = require('dotenv');
 
 const indexRoutes = require('./routes/index');
 
-const app = express();
-const PORT = 3000;
+//* Load Config
+dotEnv.config({path: "./config/config.env"});
 
-//* viwe Engine
+const app = express();
+
+//* view Engine
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
@@ -17,4 +20,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 //* Routes
 app.use(indexRoutes);
 
-app.listen(PORT, () => console.log("sever running on port 3000"));
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => console.log(`sever running in ${process.env.NODE_ENV} mode on port ${PORT}`));

@@ -1,22 +1,873 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap-rtl.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
-    <title> <%= pageTitle %> </title>
-</head>
-<body class="container" dir="rtl">
-    <h1> hello world! <br> server running for first time </h1>
-    <div class="">
-        <button class="btn btn-warning">
-            <span><i class="fa fa-arrow-down text-danger"></i></span>
-        </button>
-        <button class="btn btn-">
+<header>
+    <div class="row m-0">
+        <div class="col-12 col-lg-4 p-0">
+            <div class="brand px-5">
+                <p>
+                    پارسی گیم
+                </p>
+            </div>
+        </div>
+        <div class="col-12 col-lg-8 p-0">
+            <div>
+                <nav class="bg-black">
+                    <div class="d-flex justify-content-between top-navbar">
+                        <div>
+                            <ul class="nav p-0">
+                                <li class="nav-item header-nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">خانه</a>
+                                </li>
+                                <li class="nav-item header-nav-item">
+                                    <a class="nav-link" href="#">استخدام</a>
+                                </li>
+                                <li class="nav-item header-nav-item">
+                                    <a class="nav-link" href="#">درخواست</a>
+                                </li>
+                                <li class="nav-item header-nav-item">
+                                    <a class="nav-link" href="#">تبلیغات</a>
+                                </li>
+                                <li class="nav-item header-nav-item">
+                                    <a class="nav-link" href="#">درباره ما</a>
+                                </li>
+                                <li class="nav-item header-nav-item">
+                                    <a class="nav-link" href="#">تماس با ما</a>
+                                </li>
+                                <li class="nav-item header-nav-item">
+                                    <a class="nav-link" href="#">DMCA</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="d-flex px-3">
+                            <a href="#" class="text-warning text-decoration-none ms-1 ms-md-3 login-link">ورود/ثبت
+                                نام</a>
+                            <a href="#" class="text-warning text-decoration-none ms-1 ms-md-3"> <span><i
+                                        class="fa fa-download text-white ms-2"></i></span></a>
+                            <a href="#" class="text-warning text-decoration-none "><span><i
+                                        class="fa fa-wifi text-white"></i></span></a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="m-0 gray-header">
+                    <!-- offcanvas -->
+                    <div class="d-lg-none main-header">
+                        <button class="btn offcanvas-button" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i
+                                class="fa fa-bars"></i></button>
 
-        </button>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header p-2">
+                                <div class="d-flex w-100">
+                                    <p class="pe-2">خانه</p>
+                                    <div class=" opacity-50 m-auto">
+                                        <p>Menu</p>
+                                    </div>
+                                </div>
+
+                                <button type="button" class="btn-close text-reset m-0 p-0" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <span class="dropdown-divider m-0"></span>
+                            <div class="offcanvas-body overflow-hidden p-0">
+                                <section class="menu-sm ">
+                                    <!-- pc link -->
+                                    <div class="d-flex">
+                                        <a href="" class="text-decoration-none main-pc-link-sm text-black">
+                                            <div>
+                                                <p class="pe-2 opacity-50 link-name pt-2">بازی کامپیوتر</p>
+                                            </div>
+                                        </a>
+                                        <div class="divider"></div>
+                                        <div class="category-pc-link pointer">
+                                            <span class="d-flex justify-content-center"> <i
+                                                    class="fa fa-chevron-left opacity-50"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <!--end pc link -->
+                                    <!-- ps4 link -->
+                                    <div class="d-flex">
+                                        <a href="" class="text-decoration-none main-pc-link-sm text-black">
+                                            <div>
+                                                <p class="pe-2 opacity-50 link-name pt-2">بازی پلی استیشن 4</p>
+                                            </div>
+                                        </a>
+                                        <div class="divider"></div>
+                                        <div class="category-ps4-link pointer">
+                                            <span class="d-flex justify-content-center"> <i
+                                                    class="fa fa-chevron-left opacity-50"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <!--end ps4 link -->
+                                    <!-- ps5 link -->
+                                    <div class="d-flex">
+                                        <a href="" class="text-decoration-none main-pc-link-sm text-black">
+                                            <div>
+                                                <p class="pe-2 opacity-50 link-name pt-2">بازی پلی استیشن 5</p>
+                                            </div>
+                                        </a>
+                                        <div class="divider"></div>
+                                        <div class="category-ps5-link pointer">
+                                            <span class="d-flex justify-content-center"> <i
+                                                    class="fa fa-chevron-left opacity-50"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <!--end ps5 link -->
+                                    <!-- xbox1 link -->
+                                    <div class="d-flex">
+                                        <a href="" class="text-decoration-none main-pc-link-sm text-black">
+                                            <div>
+                                                <p class="pe-2 opacity-50 link-name pt-2">بازی ایکس باکس وان</p>
+                                            </div>
+                                        </a>
+                                        <div class="divider"></div>
+                                        <div class="category-xbox1-link pointer">
+                                            <span class="d-flex justify-content-center"> <i
+                                                    class="fa fa-chevron-left opacity-50"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <!--end xbox1 link -->
+                                    <!-- xbox360 link -->
+                                    <div class="d-flex">
+                                        <a href="" class="text-decoration-none main-pc-link-sm text-black">
+                                            <div>
+                                                <p class="pe-2 opacity-50 link-name pt-2">بازی ایکس باکس 360</p>
+                                            </div>
+                                        </a>
+                                        <div class="divider"></div>
+                                        <div class="category-xbox360-link pointer">
+                                            <span class="d-flex justify-content-center"> <i
+                                                    class="fa fa-chevron-left opacity-50"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <!--end xbox360 link -->
+                                    <!-- ps3 link -->
+                                    <div class="d-flex">
+                                        <a href="" class="text-decoration-none main-pc-link-sm text-black">
+                                            <div>
+                                                <p class="pe-2 opacity-50 link-name pt-2">بازی پلی استیشن 3</p>
+                                            </div>
+                                        </a>
+                                        <div class="divider"></div>
+                                        <div class="category-ps3-link pointer">
+                                            <span class="d-flex justify-content-center"> <i
+                                                    class="fa fa-chevron-left opacity-50"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <!--end ps3 link -->
+                                    <!-- android link -->
+                                    <div class="d-flex">
+                                        <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                            <div>
+                                                <p class="pe-2 opacity-50 link-name pt-2">بازی اندروید</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <!--end android link -->
+                                    <!-- videos link -->
+                                    <div class="d-flex">
+                                        <a href="" class="text-decoration-none main-pc-link-sm text-black">
+                                            <div>
+                                                <p class="pe-2 opacity-50 link-name pt-2">ویدیو ها</p>
+                                            </div>
+                                        </a>
+                                        <div class="divider"></div>
+                                        <div class="category-videos-link pointer">
+                                            <span class="d-flex justify-content-center"> <i
+                                                    class="fa fa-chevron-left opacity-50"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <!--end videos link -->
+                                    <!-- animation link -->
+                                    <div class="d-flex">
+                                        <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                            <div>
+                                                <p class="pe-2 opacity-50 link-name pt-2">دانلود انیمیشن</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <!--end animation link -->
+                                    <!-- text music link -->
+                                    <div class="d-flex">
+                                        <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                            <div>
+                                                <p class="pe-2 opacity-50 link-name pt-2">موسیقی متن</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <!--end text music link -->
+                                    <!-- wallpaper link -->
+                                    <div class="d-flex">
+                                        <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                            <div>
+                                                <p class="pe-2 opacity-50 link-name pt-2">دانلود والپیپر بازی و فیلم
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <!--end walpaper link -->
+                                </section>
+                                <!-- pc category -->
+                                <section class="pc-sm-category">
+                                    <div class="d-flex w-100">
+                                        <div class="d-flex">
+                                            <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                                <div>
+                                                    <p class="pe-2 opacity-50 link-name pt-2">اپدیت بازی ها</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class=" opacity-50 category-link-name ps-5 m-auto">
+                                            <p class="my-auto">بازی کامپیوتر</p>
+                                        </div>
+                                        <span><i class="fas fa-chevron-right category-close-icon"></i></span>
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">بازی استراتژیک</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">بازی اکشن</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">بازی ترسناک</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">بازی کم حجم</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">بازی ماجراجویی</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">بازی مبارزه ای</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">بازی مسابقه ای</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">بازی ورزشی</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">راهنما و افزودنی ها</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                </section>
+                                <!-- end pc category -->
+                                <!-- ps4 category -->
+                                <section class="ps4-sm-category">
+                                    <div class="d-flex w-100">
+                                        <div class="d-flex">
+                                            <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                                <div>
+                                                    <p class="pe-2 opacity-50 link-name pt-2">دانلود بازی پلی استیشن4
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class=" opacity-50 category-link-name ps-5 m-auto">
+                                            <p class="my-auto"> پلی استیشن4</p>
+                                        </div>
+                                        <span><i class="fas fa-chevron-right category-close-icon"></i></span>
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">اپدیت بازی پلی استیشن4</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">اپدیت نرم افزاری کنسول پلی
+                                                استیشن4</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">اموزش های کاربردی</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                </section>
+                                <!-- end ps4 category -->
+                                <!-- ps5 category -->
+                                <section class="ps5-sm-category">
+                                    <div class="d-flex w-100">
+                                        <div class="d-flex">
+                                            <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                                <div>
+                                                    <p class="pe-2 opacity-50 link-name pt-2">دانلود بازی پلی استیشن5
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class=" opacity-50 category-link-name ps-5 m-auto">
+                                            <p class="my-auto"> پلی استیشن5</p>
+                                        </div>
+                                        <span><i class="fas fa-chevron-right category-close-icon"></i></span>
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">اپدیت بازی پلی استیشن5</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">اپدیت نرم افزاری کنسول پلی
+                                                استیشن5</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">اموزش های کاربردی</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                </section>
+                                <!-- end ps5 category -->
+                                <!-- xbox1 category -->
+                                <section class="xbox1-sm-category">
+                                    <div class="d-flex w-100">
+                                        <div class="d-flex">
+                                            <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                                <div>
+                                                    <p class="pe-2 opacity-50 link-name pt-2">دانلود بازی ایکس باکس وان
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class=" opacity-50 category-link-name ps-5 m-auto">
+                                            <p class="my-auto"> ایکس باکس وان</p>
+                                        </div>
+                                        <span><i class="fas fa-chevron-right category-close-icon"></i></span>
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">اپدیت بازی ایکس باکس وان</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">اپدیت نرم افزاری کنسول ایکس
+                                                باکس وان</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">اموزش های کاربردی</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                </section>
+                                <!-- end xbo1 category -->
+                                <!-- xbox360 category -->
+                                <section class="xbox360-sm-category">
+                                    <div class="d-flex w-100">
+                                        <div class="d-flex">
+                                            <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                                <div>
+                                                    <p class="pe-2 opacity-50 link-name pt-2">دانلود بازی اکشن</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class=" opacity-50 category-link-name ps-5 m-auto">
+                                            <p class="my-auto"> ایکس باکس وان</p>
+                                        </div>
+                                        <span><i class="fas fa-chevron-right category-close-icon"></i></span>
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">بازی استراتژیک</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">بازی اکشن</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">بازی ترسناک</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">بازی ماجراجویی</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">بازی مبارزه ای</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">بازی مسابقه ای</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                </section>
+                                <!-- end xbo360 category -->
+                                <!-- ps3 category -->
+                                <section class="ps3-sm-category">
+                                    <div class="d-flex w-100">
+                                        <div class="d-flex">
+                                            <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                                <div>
+                                                    <p class="pe-2 opacity-50 link-name pt-2">دانلود بازی پلی استیشن3
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class=" opacity-50 category-link-name ps-5 m-auto">
+                                            <p class="my-auto"> پلی استیشن3</p>
+                                        </div>
+                                        <span><i class="fas fa-chevron-right category-close-icon"></i></span>
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">بازی استراتژیک</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">بازی اکشن</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">بازی ترسناک</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">بازی ماجراجویی</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">بازی مبارزه ای</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">بازی مسابقه ای</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                </section>
+                                <!-- end ps3 category -->
+                                <!-- videos category -->
+                                <section class="videos-sm-category">
+                                    <div class="d-flex w-100">
+                                        <div class="d-flex">
+                                            <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                                <div>
+                                                    <p class="pe-2 opacity-50 link-name pt-2">ترینر و ویدیو بازی </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class=" opacity-50 category-link-name ps-5 m-auto">
+                                            <p class="my-auto"> ویدیو ها </p>
+                                        </div>
+                                        <span><i class="fas fa-chevron-right category-close-icon"></i></span>
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">راهنما قدم به قدم بازی ها</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="" class="text-decoration-none main-pc-link-sm w-100 text-black">
+                                        <div>
+                                            <p class="pe-2 opacity-50 link-name mb-0 py-2">ترینر فیلم و انیمیشن</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider m-0"></div>
+                                </section>
+                                <!-- end videos category -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- offcanvas -->
+                    <!-- lg main-header -->
+                    <div class="gray-header lg-header d-none d-lg-inline-block">
+                        <div class="d-flex flex-wrap">
+                            <div class="lg-header-icon pc-category-link">
+                                <a href="#">
+                                    <img src="https://img.icons8.com/cotton/64/000000/steam--v4.png" />
+                                    <p class="text-white lg-header-icon-title">کامپیوتر</p>
+                                </a>
+                                <!-- pc game category -->
+                                <section class="pc-category bg-white d-none">
+                                    <div class="row pt-4 px-5">
+                                        <div class="col-6">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <ul class="list-unstyled main-pc-link  p-0">
+                                                        <li><a href="">بازی استراتژیک</a></li>
+                                                        <li><a href="">بازی اکشن</a></li>
+                                                        <li><a href="">بازی ترسناک</a></li>
+                                                        <li><a href=""> بازی ماجراجویی</a></li>
+                                                        <li><a href="">بازی مبارزه ایی</a></li>
+                                                        <li><a href="">بازی مسابقه ایی</a></li>
+                                                        <li><a href="">بازی ورزشی</a></li>
+                                                        <li><a href="">
+                                                                بازی کم حجم
+                                                            </a></li>
+                                                        <li><a href="">اپدیت بازی ها</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-6 more-pc-link">
+                                                    <h5 class="text-warning mt-3">اضافات:</h3>
+                                                        <ul class="list-unstyled p-0 ">
+                                                            <li><a href="">ترینر و کد تقلب</a></li>
+                                                            <li><a href="">ماد بازی </a></li>
+                                                            <li><a href="">زیر نویس بازی</a></li>
+                                                        </ul>
+                                                        <h5 class="text-warning mt-3">سایر:</h3>
+                                                            <ul class="list-unstyled p-0 ">
+                                                                <li><a href="">رفع مشکلات</a></li>
+                                                                <li><a href="">نرم افزار های کازبردی </a></li>
+                                                                <li><a href="">راهنمای خری محصولات</a></li>
+                                                            </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mt-3">
+                                            <div class="row">
+                                                <div class="col-6 mb-2">
+                                                    <a href="">
+                                                        <div class="steam-img-link">
+                                                            <i class="fa fa-cogs text-white float-start"></i>
+                                                            <div class="pc-img-link-txt">
+                                                                دانلود دایرکت ایکس...
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-6 mb-2">
+                                                    <a href="">
+                                                        <div class="elder-img-link">
+                                                            <i class="fas fa-gamepad text-white float-start"></i>
+                                                            <div class="pc-img-link-txt">
+                                                                دانلود دایرکت ایکس...
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-6 mb-2">
+                                                    <a href="">
+                                                        <div class="trainer-img-link">
+                                                            <i class="fas fa-bacon text-white float-start"></i>
+                                                            <div class="pc-img-link-txt">
+                                                                دانلود دایرکت ایکس...
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-6 mb-2">
+                                                    <a href="">
+                                                        <div class="steamapp-img-link">
+                                                            <i class="fas fa-cog text-white float-start"></i>
+                                                            <div class="pc-img-link-txt">
+                                                                <span>دانلود دایرکت ایکس...</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="underline"></div>
+                                </section>
+                                <!-- End pc game category -->
+                            </div>
+                            <div class="lg-header-icon ps4-category-link position-relative">
+                                <a href="#">
+                                    <img src="https://img.icons8.com/color/96/000000/ps4.png" />
+                                    <p class="text-white lg-header-icon-title">پلی استیشن4</p>
+                                </a>
+                                <!-- ps4 category -->
+                                <section class="ps4-category position-absolute d-none">
+                                    <div>
+                                        <ul class="list-unstyled main-pc-link pt-4 pe-3 p-0">
+                                            <li><a href="">دیتای بازی های ps4</a></li>
+                                            <li><a href="">اپدیت بازی ها </a></li>
+                                            <li><a href="">اپدیت نرم افزاری کنسول</a></li>
+                                            <li><a href="">راهنمای کاربردی</a></li>
+                                        </ul>
+                                        <div class="underline"></div>
+                                    </div>
+                                </section>
+                                <!-- end ps4 category -->
+                            </div>
+                            <div class="lg-header-icon ps5-category-link">
+                                <a href="#">
+                                    <img src="https://img.icons8.com/color/96/000000/ps5.png" />
+                                    <p class="text-white lg-header-icon-title">پلی استیشن5</p>
+                                </a>
+                                <!-- ps5 category -->
+                                <section class="ps5-category position-absolute bg-white d-none">
+                                    <div>
+                                        <ul class="list-unstyled main-pc-link pt-4 pe-3 p-0">
+                                            <li><a href="">دیتای بازی های ps5</a></li>
+                                            <li><a href="">راهنمای کاربردی </a></li>
+                                        </ul>
+                                        <div class="underline"></div>
+                                    </div>
+                                </section>
+                                <!-- end ps5 category -->
+                            </div>
+                            <div class="lg-header-icon xbox1-category-link">
+                                <a href="#">
+                                    <img src="https://img.icons8.com/fluency/80/000000/xbox-controller.png"
+                                        title="ایکس باکس وان" />
+                                    <p class="text-white lg-header-icon-title">ایکس باکس وان</p>
+                                </a>
+                                <!-- XB0X1 category -->
+                                <section class="xbox1-category position-absolute bg-white d-none">
+                                    <div>
+                                        <ul class="list-unstyled main-pc-link pt-4 pe-3 p-0">
+                                            <li><a href="">دیتای بازی های </a></li>
+                                            <li><a href="">اپدیت بازی ها </a></li>
+                                            <li><a href="">اپدیت نرم افزاری کنسول</a></li>
+                                            <li><a href="">راهنمای کاربردی</a></li>
+                                        </ul>
+                                        <div class="underline"></div>
+                                    </div>
+                                </section>
+                                <!--end xbox1 category -->
+                            </div>
+                            <div class="lg-header-icon xbox360-category-link">
+                                <a href="#">
+                                    <img src="https://img.icons8.com/ios/100/000000/xbox.png" />
+                                    <p class="text-white lg-header-icon-title">ایکس باکس 360</p>
+                                </a>
+                                <!-- XB0X360 category -->
+                                <section class="xbox360-category bg-white position-absolute d-none">
+                                    <div>
+                                        <ul class="list-unstyled main-pc-link pt-4 pe-3 p-0">
+                                            <li><a href="">بازی استراتژیک</a></li>
+                                            <li><a href="">بازی اکشن</a></li>
+                                            <li><a href=""> بازی ماجراجویی</a></li>
+                                            <li><a href="">بازی مبارزه ایی</a></li>
+                                            <li><a href="">بازی مسابقه ایی</a></li>
+                                            <li><a href="">بازی ورزشی</a></li>
+                                        </ul>
+                                        <div class="underline"></div>
+                                    </div>
+                                </section>
+                                <!--end xbox360 category -->
+                            </div>
+                            <div class="lg-header-icon ps3-category-link">
+                                <a href="#">
+                                    <img src="https://img.icons8.com/color/64/000000/ps3.png" />
+                                    <p class="text-white lg-header-icon-title">پلی استیشن3</p>
+                                </a>
+                                <!-- ps3 category -->
+                                <section class="ps3-category bg-white position-absolute d-none">
+                                    <div>
+                                        <ul class="list-unstyled main-pc-link pt-4 pe-3 p-0">
+                                            <li><a href="">بازی استراتژیک</a></li>
+                                            <li><a href="">بازی اکشن</a></li>
+                                            <li><a href=""> بازی ماجراجویی</a></li>
+                                            <li><a href="">بازی مبارزه ایی</a></li>
+                                            <li><a href="">بازی مسابقه ایی</a></li>
+                                            <li><a href="">بازی ورزشی</a></li>
+                                        </ul>
+                                        <div class="underline"></div>
+                                    </div>
+                                </section>
+                                <!--end ps3 category -->
+                            </div>
+                            <div class="lg-header-icon android-category-link">
+                                <a href="#">
+                                    <img src="https://img.icons8.com/wired/64/000000/android.png" />
+                                    <p class="text-white lg-header-icon-title">اندروید</p>
+                                </a>
+                                <!-- ps3 category -->
+                                <section class="android-category bg-white position-absolute d-none">
+                                    <div>
+                                        <ul class="list-unstyled main-pc-link pt-4 pe-3 p-0">
+                                            <li><a href="">بازی استراتژیک</a></li>
+                                            <li><a href="">بازی ارکید </a></li>
+                                            <li><a href="">بازی پازل</a></li>
+                                            <li><a href="">بازی معمایی</a></li>
+                                            <li><a href="">بازی اکشن</a></li>
+                                            <li><a href="">بازی تفننی</a></li>
+                                            <li><a href="">بازی ماجراجویی</a></li>
+                                            <li><a href="">بازی مبارزه ایی</a></li>
+                                            <li><a href="">بازی مسابقه ایی</a></li>
+                                            <li><a href="">بازی ورزشی</a></li>
+                                        </ul>
+                                        <div class="underline"></div>
+                                    </div>
+                                </section>
+                                <!--end ps3 category -->
+                            </div>
+                            <div class="lg-header-icon news-category-link">
+                                <a href="#">
+                                    <img
+                                        src="https://img.icons8.com/external-outline-agus-raharjo/64/000000/external-magazine-justice-outline-agus-raharjo.png" />
+                                    <p class="text-white lg-header-icon-title">خبر و ویدیو</p>
+                                </a>
+                                <!-- news category -->
+                                <section class="news-category bg-white d-none">
+                                    <div class="row pt-4">
+                                        <div class="col-6">
+                                            <div class="row">
+                                                <div class="col-6 pe-5">
+                                                    <h5 class="text-warning mt-3">اخبار:</h3>
+                                                        <ul class="list-unstyled main-pc-link  p-0 ">
+                                                            <li><a href="">اخبار بازی</a></li>
+                                                            <li><a href="">سخت افزار </a></li>
+                                                            <li><a href="">بازیهای ایرانی</a></li>
+                                                            <li><a href="">راهنمای پتروفی</a></li>
+                                                        </ul>
+                                                        <h5 class="text-warning mt-3">ویدیو:</h3>
+                                                            <ul class="list-unstyled main-pc-link p-0 ">
+                                                                <li><a href="">ترینر و ویدیو ها</a></li>
+                                                                <li><a href="">راهنمای قدم به قدم </a></li>
+                                                            </ul>
+                                                </div>
+                                                <div class="col-6 more-pc-link">
+                                                    <h5 class="text-warning mt-3">مقالات:</h3>
+                                                        <ul class="list-unstyled p-0 ">
+                                                            <li><a href="">راهنمای خرید</a></li>
+                                                            <li><a href="">زاهنمای بازیها </a></li>
+                                                            <li><a href="">نقد و بررسی</a></li>
+                                                            <li><a href="">اموزشی</a></li>
+                                                            <li><a href="">داستان بازی</a></li>
+                                                        </ul>
+                                                        <h5 class="text-warning mt-3">سایر:</h3>
+                                                            <ul class="list-unstyled p-0 ">
+                                                                <li><a href="">موسیقی</a></li>
+                                                            </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mt-3">
+                                            <div class="row mx-3">
+                                                <div class="col-6 mb-2">
+                                                    <a href="">
+                                                        <div class="steam-img-link">
+                                                            <i class="fa fa-cogs text-white float-start"></i>
+                                                            <div class="pc-img-link-txt">
+                                                                دانلود دایرکت ایکس...
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-6 mb-2">
+                                                    <a href="">
+                                                        <div class="trainer-img-link">
+                                                            <i class="fas fa-bacon text-white float-start"></i>
+                                                            <div class="pc-img-link-txt">
+                                                                دانلود دایرکت ایکس...
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="underline"></div>
+                                </section>
+                                <!-- End news category -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- edn lg main-header -->
+                    <!-- search icon -->
+                    <div class="d-inline-block search-area">
+                        <a class="btn search-modal" data-bs-toggle="modal" href="#exampleModalToggle" role="button">
+                            <span>
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content search-input rounded">
+                                <div class="input-group">
+                                    <button class="btn btn-warning rounded" type="button" id="button-addon1"><span>
+                                            <i class="fa fa-search"></i>
+                                        </span></button>
+                                    <input type="text" class="form-control search-input" placeholder="جستجو کنید"
+                                        aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end search icon -->
+                </div>
+            </div>
+        </div>
     </div>
-</body>
-</html>
+
+
+
+
+
+</header>
+<script src="assets/js/jquery-3.5.1.min.js"></script>
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstarp/bootstrap.min.js"></script>
+<script src="assets/js/main.js"></script>

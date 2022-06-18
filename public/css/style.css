@@ -12,3 +12,364 @@
     text-align: right;
     font-family: iransans;
 }
+
+.brand {
+    height: 10rem;
+    background-color: #eeb822;
+}
+
+.header-nav-item a {
+    color: #ffffff;
+    font-size: .8rem;
+    padding: 0;
+    padding-right: 10px;
+    transition: .5;
+}
+
+.header-nav-item a:hover {
+    color: #fabd15;
+}
+
+.brand p {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 4rem;
+    font-family: iransans;
+}
+
+.top-navbar {
+    padding: 8px 0;
+}
+
+.login-link {
+    font-size: .7rem;
+}
+
+.main-header {
+    z-index: -1;
+    width: calc(100% - 125px);
+    height: 120px;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.gray-header {
+    background-color: #4d4d4d;
+}
+
+.offcanvas-button {
+    font-size: 4rem;
+    color: #ffffff;
+    padding: 18px;
+}
+
+.offcanvas-button:focus {
+    box-shadow: none;
+}
+
+.search-area {
+    height: 120px;
+    width: 120px;
+    background-color: #eeb822;
+    z-index: 10000;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.search-area span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.search-area span i {
+    font-size: 4rem;
+}
+
+.lg-header {
+    height: 240px;
+    width: calc(100% - 125px);
+}
+
+.lg-header-icon {
+    /* filter: brightness(200%); */
+    padding: 0 1rem;
+    transition: .5s;
+    height: 120px;
+    width: 6rem;
+    position: relative;
+}
+
+.lg-header-icon a{
+    text-decoration: none;
+}
+
+.lg-header-icon:hover {
+    background-color: #181818;
+}
+
+.lg-header-icon img {
+    height: 4rem;
+    width: 4rem;
+}
+
+.lg-header-icon-title {
+    font-size: .6rem;
+    transition: .5s;
+    text-align: center;
+}
+
+.lg-header-icon:hover .lg-header-icon-title {
+    color: #eeb822 !important;
+}
+
+.search-modal {
+    height: 120px;
+    width: 120px;
+}
+
+.search-modal:focus {
+    box-shadow: none;
+}
+
+.search-input {
+    background-color: #4d4d4d;
+    border: none;
+}
+
+.search-input:focus {
+    background-color: #4d4d4d;
+    box-shadow: none;
+    border: none;
+}
+
+.pc-category {
+    position: absolute;
+    right: 0;
+    top: 120px;
+    width: 800px;
+    background-color: #ffffff;
+    z-index: 99999;
+}
+
+.main-pc-link{
+    width: 200px;
+}
+
+.main-pc-link a , .main-pc-link li{
+    text-decoration: none;
+    color: black;
+    opacity: .7;
+    transition: .3s;
+}
+
+.main-pc-link li:hover , .more-pc-link ul li:hover{
+    opacity: 1;
+    transform: translatex(-5px)!important;
+}
+
+.main-pc-link li{
+    margin-bottom: .5rem;
+}
+
+.more-pc-link a, .more-pc-link ul li{
+    text-decoration: none;
+    color: black;
+    opacity: .7;
+    transition: .3s;
+}
+
+.more-pc-link li{
+    margin-bottom: .5rem;
+}
+
+.pc-img-link-txt{
+    font-size: .7rem;
+    color: #ffffff;
+    padding-top: 105px;
+    padding-right: 10px;
+    transition: .3s;
+}
+
+.steam-img-link{
+    height: 130px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.4318102240896359) 13%, rgba(241,241,241,0) 100%), url('../images/Directx-228x132.webp') center/cover no-repeat;
+}
+
+.steam-img-link :hover .pc-img-link-txt span{
+   color: #eeb822;
+}
+
+.elder-img-link{
+    height: 130px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.4318102240896359) 13%, rgba(241,241,241,0) 100%), url('../images/elden-ring-trainer-228x132.jpg') center/cover no-repeat;
+}
+
+.elder-img-link :hover .pc-img-link-txt{
+   color: #eeb822;
+}
+.trainer-img-link{
+    height: 130px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.4318102240896359) 13%, rgba(241,241,241,0) 100%), url('../images/GTA-Vice-City-Trainer-228x132.webp') center/cover no-repeat;
+}
+
+.trainer-img-link :hover .pc-img-link-txt{
+   color: #eeb822;
+}
+.steamapp-img-link{
+    height: 130px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.4318102240896359) 13%, rgba(241,241,241,0) 100%), url('../images/Steam-228x132.jpg') center/cover no-repeat;
+}
+
+.steamapp-img-link :hover .pc-img-link-txt span{
+   color: #eeb822;
+}
+
+.steam-img-link i, .elder-img-link i, .trainer-img-link i, .steamapp-img-link i
+{
+    font-size: 2.5rem;
+    padding: 5px;
+}
+
+.underline{
+    width: 100%;
+    height: 5px;
+    background-color: #eeb822;
+}
+
+.ps4-category{
+    width: 220px;
+    background-color: #ffffff;
+    right: 0;
+    top: 120px;
+    z-index: 99999;
+}
+
+.ps5-category{
+    width: 220px;
+    background-color: #ffffff;
+    right: 0;
+    top: 120px;
+    z-index: 99999;
+}
+
+.xbox1-category{
+    width: 220px;
+    background-color: #ffffff;
+    right: 0;
+    top: 120px;
+    z-index: 99999;
+}
+
+.xbox360-category{
+    width: 220px;
+    background-color: #ffffff;
+    right: 0;
+    top: 120px;
+    z-index: 99999;
+}
+
+.ps3-category{
+    width: 220px;
+    background-color: #ffffff;
+    right: 0;
+    top: 120px;
+    z-index: 99999;
+}
+
+.android-category{
+    width: 220px;
+    background-color: #ffffff;
+    right: 0;
+    top: 120px;
+    z-index: 99999;
+}
+
+.news-category{
+    position: absolute;
+    right: 0px;
+    top: 120px;
+    width: 800px;
+    background-color: #ffffff;
+    z-index: 2000;
+}
+
+/* Medium devices (tablets, 1340px and up) */
+@media (min-width: 1340px) { 
+    .news-category{
+        position: absolute;
+        right: -672px;
+        top: 120px;
+        width: 800px;
+        background-color: #ffffff;
+        z-index: 2000;
+    }
+    .lg-header {
+        height: 120px;
+        width: calc(100% - 125px);
+    }
+}
+
+/* mobile menu */
+.offcanvas-header div p{
+    font-size: .8rem;
+   padding: 0;
+}
+
+.offcanvas-header div div p{
+    font-size: .7rem;
+}
+
+.main-pc-link-sm{
+    width: 80%;
+    height: 36px;
+}
+
+.divider{
+    height: 36px;
+    background-color: #4d4d4d;
+    opacity: 15%;
+    width: 1.3px;
+}
+
+.category-pc-link , .category-ps4-link , .category-ps5-link , .category-xbox1-link , .category-ps3-link , .category-xbox360-link , .category-videos-link{
+    width: 19%;
+    height: 36px;
+}
+
+.category-pc-link span i , .category-ps4-link span i, .category-ps5-link span i, .category-xbox1-link span i, .category-ps3-link span i, .category-xbox360-link span i, .category-videos-link span i{
+    font-size: .8rem;
+    padding-top: 14px;
+}
+
+.main-pc-link-sm div p{
+   transition: .3s;
+}
+
+.main-pc-link-sm:hover div p{
+    color: #181818!important;
+    opacity: 1!important;
+    transform: translateX(-8px);
+}
+
+.link-name{
+    font-size: .9rem;
+}
+ 
+.category-link-name{
+    font-size: .6rem;
+}
+
+.category-close-icon{
+    font-size: .8rem;
+    opacity: .6;
+    padding: 12px 30px;
+    cursor: pointer;
+}
+
+.pc-sm-category ,.ps4-sm-category ,.ps5-sm-category ,.xbox1-sm-category ,.xbox360-sm-category ,.ps3-sm-category ,.videos-sm-category {
+    transform: translateX(500px);
+    display: none;
+}

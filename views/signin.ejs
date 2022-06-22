@@ -1,0 +1,67 @@
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="/images/3156627.jpg" alt="Image" class="signin-bg">
+            </div>
+            <div class="col-md-6 contents">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="mb-4 login_title">
+                            <h3>ثبت نام</h3>
+                        </div>
+                        <form action="/users/signin" method="POST">
+                            <div class="form-group first rounded">
+                                <label for="username">نام</label>
+                                <input type="text" class="form-control" id="username" name="fullname" required autofocus >
+
+                            </div>
+                            <div class="form-group first my-4 rounded">
+                                <label for="email">نام کاربری</label>
+                                <input type="text" class="form-control" id="username" name="email" required >
+
+                            </div>
+                            <div class="form-group last my-4 rounded">
+                                <label for="password">رمز ورود</label>
+                                <input type="password" class="form-control" id="password" name="password" required >
+                            </div>
+                            <div class="form-group last my-4 rounded">
+                                <label for="confirmPassword">تکرار رمز ورود</label>
+                                <input type="password" class="form-control" id="inputConfirmPassword" name="confirmPassword" required >
+                            </div>
+
+                            <div class="d-flex mb-5 align-items-center justify-content-between">
+                                <a href="/users/login">اکانت کاربری دارم</a>
+                            </div>
+
+                            <input type="submit" value="ثبت نام" class="btn btn-block btn-primary">
+
+                            <span class="d-block text-right my-4 text-muted">&mdash; یا ورود با استفاده از
+                                &mdash;</span>
+
+                            <div class="social-login">
+                                <a href="#" class="facebook">
+                                    <span> <i class="fab fa-facebook "></i></span>
+                                </a>
+                                <a href="#" class="twitter">
+                                    <span class="fab fa-twitter "></span>
+                                </a>
+                                <a href="#" class="google">
+                                    <span class="fab fa-google "></span>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="/js/Login-Signin.js"></script>

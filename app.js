@@ -6,9 +6,7 @@ const dotEnv = require('dotenv');
 const morgan = require('morgan');
 
 const connectDB = require('./config/db');
-const blogRoutes = require('./routes/blog');
-const dashboardRoutes = require('./routes/dashboard');
-
+const { urlencoded } = require('express');
 
 //* Load Config
 dotEnv.config({path: "./config/config.env"});
@@ -29,6 +27,8 @@ app.set('view engine', 'ejs');
 app.set("layout" , "./layouts/mainLayouts")
 app.set('views', 'views');
 
+//* Bodyparser
+app.use(express.urlencoded({extended: false}));
 
 //* Static Folders
 app.use(express.static(path.join(__dirname, 'public')));
@@ -36,8 +36,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use(express.static(path.join(__dirname, process.env.FONTAWESOME)));
 
 //* Routes
-app.use(blogRoutes);
-app.use("/dashboard" , dashboardRoutes); //!filter by /dashboard address get to dashboardRoutes
+app.use("/",require('./routes/blog'));
+app.use("/users",require('./routes/users'));
+app.use("/dashboard" , require('./routes/dashboard')); //!filter by /dashboard address get to dashboardRoutes
+app.use(require('./controllers/error').get404)
 
 const PORT = process.env.PORT || 5000;
 

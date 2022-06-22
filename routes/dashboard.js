@@ -14,14 +14,4 @@ router.get('/', (req, res) => {
     });
 });
 
-//* @desc weblog login page
-//* routes GET /dashboard/loginPage
-router.get('/login', (req, res) => {
-    res.render('login', {
-        pageTitle: "ورود به بخش مدیریت",
-        path:"/login"
-    });
-});
-
-
 module.exports = router;

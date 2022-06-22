@@ -8,12 +8,12 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <% if (path === "/login") { %>
+    <% if (path === "/login" || path === "/signin" || path === "/404") { %>
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
         <link rel="stylesheet" href="/css/signin.css">
-        <link rel="stylesheet" href="/css/bootstrap-rtl.css">
-        <link rel="stylesheet" href="/css/font-awesome.css">
     <% } %>
     <title> <%= pageTitle %> </title>
 </head>

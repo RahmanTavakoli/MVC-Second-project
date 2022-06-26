@@ -1,23 +1,17 @@
 const {
     Router
 } = require("express");
-const yup = require('yup');
+const User = require('../models/user');
+
 
 const router = new Router();
-
-const schema =  yup.object().shape({
-    fullname: yup.string().required("نام الزامی است").min(4).max(255),
-    email: yup.string().email().required("ایمیل معتبر نیست"),
-    password: yup.string().min(4).max(255),
-    confirmPassword: yup.string().required().oneOf([yup.ref("password"),null])
-});
 
 //* @desc weblog login page
 //* routes GET /users/loginPage
 router.get('/login', (req, res) => {
     res.render('login', {
         pageTitle: "ورود به بخش مدیریت",
-        path:"/login"
+        path: "/login"
     });
 });
 
@@ -26,20 +20,33 @@ router.get('/login', (req, res) => {
 router.get('/signin', (req, res) => {
     res.render('signin', {
         pageTitle: "ثبت نام",
-        path:"/signin"
+        path: "/signin"
     });
 });
 
 //* @desc weblog handle page
 //* routes POST /users/handle Page
-router.post('/signin', (req, res) => {
-    schema.validate(req.body).then((result) =>{
-        console.log(result);
-        res.send("All Good");
-    }).catch((err) =>{
+router.post('/signin', async (req, res) => {
+    try {
+        await User.userValidation(req.body);
+        // user.create(req.body)
+        res.redirect("/users/login");
+    } catch (err) {
         console.log(err);
-        res.send("Error" , {errors: err.errors});
-    })
+        const errors = [];
+        err.inner.forEach((e) => {
+            errors.push({
+                name: e.path,
+                message: e.message,
+            });
+        });
+
+        return res.render('signin', {
+            pageTitle: "ثبت نام",
+            path: "/signin",
+            errors,
+        });
+    }
 });
 
 module.exports = router

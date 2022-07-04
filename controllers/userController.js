@@ -1,12 +1,23 @@
 const bcrypt = require('bcryptjs');
+const passport = require('passport');
 
 const User = require('../models/user');
 
 exports.login = (req, res) => {
     res.render('login', {
         pageTitle: "ورود به بخش مدیریت",
-        path: "/login",message : req.flash("success_msg")
+        path: "/login",
+        message: req.flash("success_msg"),
+        error: req.flash("error")
     });
+}
+
+exports.handlelogin = (req, res, next) => {
+    passport.authenticate("local", {
+        successRedirect: "/dashboard",
+        failureRedirect: "/users/login",
+        failureFlash: true
+    })(req, res, next);
 }
 
 exports.signin = (req, res) => {
@@ -47,7 +58,7 @@ exports.createUser = async (req, res) => {
             email,
             password: hash
         })
-        req.flash("success_msg" , "ٍثبت نام موفقیت امیز بود")
+        req.flash("success_msg", "ٍثبت نام موفقیت امیز بود")
         res.redirect("/users/login");
 
         //TODO: solution normaly for hashing password

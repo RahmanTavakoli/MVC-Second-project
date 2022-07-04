@@ -8,6 +8,10 @@ const router = new Router();
 //* routes GET /users/loginPage
 router.get('/login',userController.login);
 
+//* @desc weblog login handle
+//* routes POST /users/loginPage
+router.post('/login',userController.handlelogin);
+
 //* @desc weblog signin page
 //* routes GET /users/signinPage
 router.get('/signin', userController.signin);

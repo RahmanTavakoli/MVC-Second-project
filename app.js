@@ -6,6 +6,7 @@ const dotEnv = require('dotenv');
 const morgan = require('morgan');
 const flash = require('connect-flash');
 const session = require('express-session');
+const passport = require('passport');
 
 const connectDB = require('./config/db');
 const { urlencoded } = require('express');
@@ -15,6 +16,9 @@ dotEnv.config({path: "./config/config.env"});
 
 //*DataBase connection
 connectDB();
+
+//* passport configuration
+require('./config/passport');
 
 const app = express();
 
@@ -39,6 +43,10 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
 }));
+
+//*passport
+app.use(passport.initialize());
+app.use(passport.session());
 
 //*Flash
 app.use(flash()); //req.flash

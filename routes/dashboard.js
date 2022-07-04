@@ -11,7 +11,8 @@ router.get('/', authenticated,(req, res) => {
     res.render('dashboard', {
         pageTitle: "داشبورد | بخش مدیریت",
         path:"/dashboard",
-        layout:"./layouts/dashLayout"
+        layout:"./layouts/dashLayout",
+        fullname: req.user.fullname,
     });
 });
 

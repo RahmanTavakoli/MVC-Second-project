@@ -20,6 +20,13 @@ exports.handlelogin = (req, res, next) => {
     })(req, res, next);
 }
 
+exports.logout = (req , res) => {
+    req.logout((param) => {
+        req.flash("success_msg" , "خروج موفق امیز بود");
+        res.redirect("/users/login");
+    });
+}
+
 exports.signin = (req, res) => {
     res.render('signin', {
         pageTitle: "ثبت نام",

@@ -11,7 +11,7 @@ router.get('/login',userController.login);
 
 //* @desc weblog login handle
 //* routes POST /users/loginPage
-router.post('/login',userController.handlelogin);
+router.post('/login',userController.handlelogin , userController.rememberMe);
 
 //* @desc weblog logout handle
 //* routes GET /users/logout

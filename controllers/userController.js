@@ -1,4 +1,4 @@
-const bcrypt = require('bcryptjs');
+//const bcrypt = require('bcryptjs');
 const passport = require('passport');
 
 const User = require('../models/user');
@@ -69,11 +69,12 @@ exports.createUser = async (req, res) => {
         }
         //*hash password
         //TODO: solution shortly for hashing password
-        const hash = await bcrypt.hash(password, 10)
+        //const hash = await bcrypt.hash(password, 10)
+        // await User.create({ fullname, email, password: hash });
         await User.create({
             fullname,
             email,
-            password: hash
+            password
         })
         req.flash("success_msg", "ٍثبت نام موفقیت امیز بود")
         res.redirect("/users/login");

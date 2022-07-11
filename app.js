@@ -1,5 +1,6 @@
 const path = require('path');
 
+const debug = require('debug')("Weblog-PRJ");
 const express = require('express');
 const mongoose = require('mongoose');
 const expressLayout = require('express-ejs-layouts');
@@ -11,6 +12,7 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 
 const connectDB = require('./config/db');
+const winston = require('winston');
 const { urlencoded } = require('express');
 
 //* Load Config
@@ -18,6 +20,7 @@ dotEnv.config({path: "./config/config.env"});
 
 //*DataBase connection
 connectDB();
+debug("Connected To Database");
 
 //* passport configuration
 require('./config/passport');
@@ -26,13 +29,15 @@ const app = express();
 
 //*Logging
 if(process.env.NODE_ENV === 'development'){
+    debug("Morgan Enabled");
     app.use(morgan("dev"));
+    // app.use(morgan("combined" , {stream: winston.stream.write}));
 }
 
 //* view Engine
 app.use(expressLayout)
 app.set('view engine', 'ejs');
-app.set("layout" , "./layouts/mainLayouts")
+app.set('layout' , './layouts/mainLayouts')
 app.set('views', 'views');
 
 //* Bodyparser
@@ -43,7 +48,7 @@ app.use(session({
     secret: "secret",
     resave: false,
     saveUninitialized: false,
-    store: new MongoStore({mongooseConnection: mongoose.connection})
+    store: new MongoStore({mongooseConnection: mongoose.connection}),
 }));
 
 //*passport

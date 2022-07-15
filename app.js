@@ -1,6 +1,7 @@
 const path = require('path');
 
 const debug = require('debug')("Weblog-PRJ");
+const bodyParser = require('body-parser');
 const express = require('express');
 const mongoose = require('mongoose');
 const expressLayout = require('express-ejs-layouts');
@@ -41,7 +42,8 @@ app.set('layout' , './layouts/mainLayouts')
 app.set('views', 'views');
 
 //* Bodyparser
-app.use(express.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
 //* Session
 app.use(session({

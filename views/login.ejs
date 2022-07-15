@@ -10,7 +10,7 @@
                         <div class="mb-4 login_title">
                             <h3> ورود</h3>
                         </div>
-                        <%- include("./include/loginMessages.ejs")  %> 
+                        <%- include("./include/loginMessages.ejs")  %>
                         <form action="/users/login" method="POST">
                             <div class="form-group first rounded">
                                 <label for="username">نام کاربری</label>
@@ -19,7 +19,7 @@
                             </div>
                             <div class="form-group last my-4 rounded">
                                 <label for="password">رمز ورود</label>
-                                <input type="password" class="form-control" id="password" name="password" required >
+                                <input type="password" class="form-control" id="password" name="password" required>
                             </div>
 
                             <div class="d-flex mb-5 align-items-center justify-content-between">
@@ -30,14 +30,12 @@
                                 </label>
                                 <span class="d-inline-block"><a href="#" class="forgot-pass">فراموشی رمز</a></span>
                             </div>
-
+                            <div class="g-recaptcha my-3 ml-5" data-sitekey="6LcClOYgAAAAAG_DXx8_6MlSiNx6CWL0GyUDTgCA"></div>
                             <input type="submit" value="ورود به سایت" class="btn btn-block btn-primary">
                         </form>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </div>
 </div>
